@@ -28,7 +28,7 @@ public class ControllerTest {
 
     @Test
     public void test3() {
-        String name = mobileServiceImpl.getList("123").get(1).getName();
+        String name = mobileServiceImpl.getList("789").get(1).getName();
         System.out.println(name);
     }
 
