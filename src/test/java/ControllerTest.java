@@ -42,8 +42,8 @@ public class ControllerTest {
 
     @Test
     public void test4() {
-         SysUser item = sysUserMapper.selectByPrimaryKey("2");
-        System.out.println(JSONObject.fromObject(item));
+         List<SysUser> item = sysUserMapper.queryAll();
+        System.out.println(JSONObject.fromObject(item.get(1)));
 
     }
 

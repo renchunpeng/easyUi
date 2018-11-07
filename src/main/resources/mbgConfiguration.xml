@@ -50,7 +50,8 @@
         </javaClientGenerator>
 
 
-        <!-- 列出要生成代码的所有表，这里配置的是不生成Example文件 -->
+        <!--列出要生成代码的所有表，这里配置的是不生成Example文件（list查询不会有）-->
+        <!--创建已经存在的先把bean和xml删除，再注释掉dao生成代码-->
         <!--<table tableName="sys_user" domainObjectName="SysUser"-->
                <!--enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"-->
                <!--enableSelectByExample="false" selectByExampleQueryId="false" >-->
