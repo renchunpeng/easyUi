@@ -49,6 +49,7 @@ public class SecurityInterceptor extends HandlerInterceptorAdapter {
     /**
      * 可做权限校验
      */
+    @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
             throws IOException {
         String urlPath = request.getRequestURI();
