@@ -1,9 +1,14 @@
+import com.soecode.lyf.dao.SysUserMapper;
+import com.soecode.lyf.entity.SysUser;
 import com.soecode.lyf.service.impl.MobileServiceImpl;
+import net.sf.json.JSONObject;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import java.util.List;
 
 /**
  * @author rcp
@@ -13,6 +18,9 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 public class ControllerTest {
     @Autowired
     private MobileServiceImpl mobileServiceImpl;
+
+    @Autowired
+    private SysUserMapper sysUserMapper;
 
     @Test
     public void test() {
@@ -30,6 +38,13 @@ public class ControllerTest {
     public void test3() {
         String name = mobileServiceImpl.getList("789").get(1).getName();
         System.out.println(name);
+    }
+
+    @Test
+    public void test4() {
+         SysUser item = sysUserMapper.selectByPrimaryKey("2");
+        System.out.println(JSONObject.fromObject(item));
+
     }
 
 }
