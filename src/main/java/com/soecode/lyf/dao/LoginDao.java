@@ -3,6 +3,7 @@ package com.soecode.lyf.dao;
 import java.util.List;
 import java.util.Map;
 
+import com.soecode.lyf.entity.Menu;
 import com.soecode.lyf.entity.User;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
@@ -32,4 +33,10 @@ public interface LoginDao {
 	 * @return
 	 */
 	List<User> getAllUser();
+
+	/**
+	 * 获取用户菜单
+	 * @return
+	 */
+	List<Menu> getUserMenu();
 }

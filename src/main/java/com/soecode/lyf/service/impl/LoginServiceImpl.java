@@ -3,6 +3,7 @@ package com.soecode.lyf.service.impl;
 import java.util.List;
 import java.util.Map;
 
+import com.soecode.lyf.entity.Menu;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,5 +37,10 @@ public class LoginServiceImpl implements LoginService {
 	@Override
 	public List<User> getAllUser() {
 		return loginDao.getAllUser();
+	}
+
+	@Override
+	public List<Menu> getUserMenu() {
+		return loginDao.getUserMenu();
 	}
 }

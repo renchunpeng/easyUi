@@ -56,7 +56,8 @@
      </mvc:interceptors>
      
      <!-- 优先级低于 拦截器IntercePtors，用于在通过拦截器之后截取某些url，使之可以跳转到自定义的地址去 -->
-     <mvc:view-controller path="/" view-name="redirect:/mobile/bookList"/>
+     <!--<mvc:view-controller path="/" view-name="redirect:/mobile/bookList"/>-->
+     <mvc:view-controller path="/" view-name="redirect:/test/index"/>
      
      <!-- 优先级低于 拦截器IntercePtors ，用于在拦截器拦截通过后，访问以下静态资源,这个直接可以被<mvc:default-servlet-handler/>取代-->
      <!-- <mvc:resources mapping="/css/**" location="/css/"/> -->

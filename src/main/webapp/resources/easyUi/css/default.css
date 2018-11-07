@@ -54,7 +54,7 @@ a:hover{ color:Red; text-decoration:underline;}
 
 .qy_top2bg{
     background-image: url("../images/qyxx_r3_c15.jpg");
-    background-position: left center;
+    /*background-position: left center;*/
     background-repeat: repeat-x;
 }
 

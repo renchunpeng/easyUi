@@ -28,5 +28,12 @@
 		FROM
 			user
 	</select>
+
+	<select id="getUserMenu" resultType="Menu">
+		SELECT
+		  *
+		FROM
+		  sys_menu
+	</select>
 	
 </mapper>

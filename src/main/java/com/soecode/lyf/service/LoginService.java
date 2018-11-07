@@ -3,6 +3,7 @@ package com.soecode.lyf.service;
 import java.util.List;
 import java.util.Map;
 
+import com.soecode.lyf.entity.Menu;
 import com.soecode.lyf.entity.User;
 
 /**
@@ -30,4 +31,11 @@ public interface LoginService {
 	 * @return
 	 */
 	List<User> getAllUser();
+
+	/**
+	 * 获取用户菜单
+	 *
+	 * @return
+	 */
+	List<Menu> getUserMenu();
 }
