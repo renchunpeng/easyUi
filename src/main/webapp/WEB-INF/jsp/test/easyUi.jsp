@@ -2,47 +2,47 @@
 <%@include file="/WEB-INF/jsp/common/head.jsp" %>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="keywords" content="jquery,ui,easy,easyui,web">
-    <meta name="description" content="easyui help you build your web page easily!">
-    <title>Add search functionality in DataGrid - jQuery EasyUI Demo</title>
-    <link rel="stylesheet" type="text/css" href="http://www.jeasyui.net/Public/js/easyui/themes/default/easyui.css">
-    <link rel="stylesheet" type="text/css" href="http://www.jeasyui.net/Public/js/easyui/themes/icon.css">
-    <link rel="stylesheet" type="text/css" href="http://www.jeasyui.net/Public/js/easyui/demo/demo.css">
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
-    <script type="text/javascript" src="http://www.jeasyui.net/Public/js/easyui/jquery.easyui.min.js"></script>
-    <script type="text/javascript">
-        function doSearch(){
-            $('#tt').datagrid('load',{
-                itemid: $('#itemid').val(),
-                productid: $('#productid').val()
-            });
-        }
-    </script>
+<%@include file="/WEB-INF/jsp/common/easyUi.jsp" %>
 </head>
 <body>
 
 <table id="tt" class="easyui-datagrid"
        url="getTestValue" type="GET" data-options="fitColumns:true,singleSelect:true"
-       toolbar="#tb"
+       toolbar="#tb" fitConlumns="true"
        rownumbers="true" pagination="true" style="height: 100%;width: 100%">
     <thead>
     <tr>
-        <th field="itemid" >序号</th>
-        <th field="productid" >产品编码</th>
-        <th field="listprice"  align="right">价格</th>
-        <th field="unitcost"  align="right">单位</th>
-        <th field="attr1" >规格</th>
-        <th field="status"  align="center">状态</th>
+        <th field="ck" checkbox="true"></th>
+        <th field="itemid" width="100">序号</th>
+        <th field="productid" width="100">产品编码</th>
+        <th field="listprice" width="100" align="right">价格</th>
+        <th field="unitcost" width="100" align="right">单位</th>
+        <th field="attr1" width="100">规格</th>
+        <th field="status" width="100" align="center">状态</th>
     </tr>
     </thead>
 </table>
-<div id="tb" style="padding:3px">
-    <span>序号:</span>
-    <input id="itemid" style="line-height:26px;border:1px solid #ccc">
-    <span>产品编码:</span>
-    <input id="productid" style="line-height:26px;border:1px solid #ccc">
-    <a href="#" class="easyui-linkbutton" plain="true" onclick="doSearch()">查询</a>
+<div id="tb" style="padding:5px;height:auto">
+    <div style="margin-bottom:5px">
+        <a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true"></a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-edit" plain="true"></a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-save" plain="true"></a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-cut" plain="true"></a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true"></a>
+    </div>
+    <div>
+        Date From: <input class="easyui-datebox" style="width:80px">
+        To: <input class="easyui-datebox" style="width:80px">
+        Language:
+        <select class="easyui-combobox" panelHeight="auto" style="width:100px">
+            <option value="java">Java</option>
+            <option value="c">C</option>
+            <option value="basic">Basic</option>
+            <option value="perl">Perl</option>
+            <option value="python">Python</option>
+        </select>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-search">Search</a>
+    </div>
 </div>
 </body>
 </html>

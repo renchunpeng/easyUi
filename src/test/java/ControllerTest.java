@@ -42,8 +42,6 @@ public class ControllerTest {
 
     @Test
     public void test4() {
-         List<SysUser> item = sysUserMapper.queryAll();
-        System.out.println(JSONObject.fromObject(item.get(1)));
 
     }
 
