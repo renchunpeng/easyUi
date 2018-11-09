@@ -15,4 +15,16 @@ public interface SysUserService {
      * @return
      */
 	List<SysUser> queryAll(SysUserExample example);
+
+    /**
+     * 修改用户信息
+     * @return
+     */
+    int edit(SysUser user);
+
+    /**
+     * 根据主键查询用户信息
+     * @return
+     */
+    SysUser get(String id);
 }

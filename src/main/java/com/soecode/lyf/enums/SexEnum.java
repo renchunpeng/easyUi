@@ -3,20 +3,21 @@ package com.soecode.lyf.enums;
 
 import com.soecode.lyf.common.tld.ICommonEnum;
 
-/**
- * 通用枚举：基本药物属性0国基药1.省基药2非基药
- * @author
- *
- */
-public enum DrugAttr implements ICommonEnum {
-
-	GZY(0, "国基药"),
-	SJY(1, "省基药"),
-	FJY(2, "非基药");
+/***
+ ** @category 关系
+ ** @author hss
+ ** @date 2017年7月2日 下午9:56:33
+ ***/
+public enum SexEnum implements ICommonEnum {
+	/**
+	 * 1.男 2.女
+	 */
+	man(1,"男"),
+	woman(2,"女");
 	private int key;
 	private String value;
 
-	private DrugAttr(int key, String value) {
+    SexEnum(int key, String value) {
 		this.key = key;
 		this.value = value;
 	}
@@ -31,7 +32,7 @@ public enum DrugAttr implements ICommonEnum {
 	}
 	
 	public static String getValueByKey(Integer key) {
-		for (ICommonEnum<Integer> item : values()) {
+		for (ICommonEnum item : values()) {
 			if (item.getKey() == key) {
 				return item.getValue();
 			}
@@ -40,7 +41,7 @@ public enum DrugAttr implements ICommonEnum {
 	}
 	
 	public static Integer getKeyByValue(String value) {
-		for (ICommonEnum<Integer> item : values()) {
+		for (ICommonEnum item : values()) {
 			if (item.getValue().equals(value)) {
 				return (Integer)item.getKey();
 			}
@@ -56,5 +57,6 @@ public enum DrugAttr implements ICommonEnum {
 		}
 		return res; 
 	}
-
+		
+	
 }

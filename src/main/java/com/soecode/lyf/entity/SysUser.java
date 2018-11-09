@@ -1,23 +1,30 @@
 package com.soecode.lyf.entity;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 import java.io.Serializable;
 import java.util.Date;
 
 public class SysUser implements Serializable {
     private String userId;
 
+    @NotEmpty(message = "用户名不能为空")
     private String loginName;
 
+    @NotEmpty(message = "密码不能为空")
     private String password;
 
+    @NotEmpty(message = "姓名不能为空")
     private String name;
 
     private Integer age;
 
-    private Byte sex;
+    @NotEmpty(message = "性别不能为空")
+    private Integer sex;
 
     private String phone;
 
+    @NotEmpty(message = "邮箱不能为空")
     private String email;
 
     private String address;
@@ -70,11 +77,11 @@ public class SysUser implements Serializable {
         this.age = age;
     }
 
-    public Byte getSex() {
+    public Integer getSex() {
         return sex;
     }
 
-    public void setSex(Byte sex) {
+    public void setSex(Integer sex) {
         this.sex = sex;
     }
 

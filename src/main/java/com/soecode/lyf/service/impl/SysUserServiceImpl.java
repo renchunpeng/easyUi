@@ -27,4 +27,16 @@ public class SysUserServiceImpl implements SysUserService {
         List<SysUser> sysUsers = sysUserMapper.selectByExample(example);
         return sysUsers;
     }
+
+	@Override
+	public int edit(SysUser user) {
+		int i = sysUserMapper.updateByPrimaryKeySelective(user);
+		return i;
+	}
+
+    @Override
+    public SysUser get(String id) {
+        SysUser sysUser = sysUserMapper.selectByPrimaryKey(id);
+        return sysUser;
+    }
 }

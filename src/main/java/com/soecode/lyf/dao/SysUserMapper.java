@@ -4,7 +4,9 @@ import com.soecode.lyf.entity.SysUser;
 import com.soecode.lyf.entity.SysUserExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface SysUserMapper {
     long countByExample(SysUserExample example);
 

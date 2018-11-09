@@ -7,7 +7,7 @@
     <result column="password" jdbcType="VARCHAR" property="password" />
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="age" jdbcType="INTEGER" property="age" />
-    <result column="sex" jdbcType="TINYINT" property="sex" />
+    <result column="sex" jdbcType="INTEGER" property="sex" />
     <result column="phone" jdbcType="VARCHAR" property="phone" />
     <result column="email" jdbcType="VARCHAR" property="email" />
     <result column="address" jdbcType="VARCHAR" property="address" />
@@ -113,7 +113,7 @@
       email, address, last_login_time, 
       create_user, create_time)
     values (#{userId,jdbcType=VARCHAR}, #{loginName,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
-      #{name,jdbcType=VARCHAR}, #{age,jdbcType=INTEGER}, #{sex,jdbcType=TINYINT}, #{phone,jdbcType=VARCHAR}, 
+      #{name,jdbcType=VARCHAR}, #{age,jdbcType=INTEGER}, #{sex,jdbcType=INTEGER}, #{phone,jdbcType=VARCHAR}, 
       #{email,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, #{lastLoginTime,jdbcType=TIMESTAMP}, 
       #{createUser,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP})
   </insert>
@@ -174,7 +174,7 @@
         #{age,jdbcType=INTEGER},
       </if>
       <if test="sex != null">
-        #{sex,jdbcType=TINYINT},
+        #{sex,jdbcType=INTEGER},
       </if>
       <if test="phone != null">
         #{phone,jdbcType=VARCHAR},
@@ -221,7 +221,7 @@
         age = #{record.age,jdbcType=INTEGER},
       </if>
       <if test="record.sex != null">
-        sex = #{record.sex,jdbcType=TINYINT},
+        sex = #{record.sex,jdbcType=INTEGER},
       </if>
       <if test="record.phone != null">
         phone = #{record.phone,jdbcType=VARCHAR},
@@ -253,7 +253,7 @@
       password = #{record.password,jdbcType=VARCHAR},
       name = #{record.name,jdbcType=VARCHAR},
       age = #{record.age,jdbcType=INTEGER},
-      sex = #{record.sex,jdbcType=TINYINT},
+      sex = #{record.sex,jdbcType=INTEGER},
       phone = #{record.phone,jdbcType=VARCHAR},
       email = #{record.email,jdbcType=VARCHAR},
       address = #{record.address,jdbcType=VARCHAR},
@@ -280,7 +280,7 @@
         age = #{age,jdbcType=INTEGER},
       </if>
       <if test="sex != null">
-        sex = #{sex,jdbcType=TINYINT},
+        sex = #{sex,jdbcType=INTEGER},
       </if>
       <if test="phone != null">
         phone = #{phone,jdbcType=VARCHAR},
@@ -309,7 +309,7 @@
       password = #{password,jdbcType=VARCHAR},
       name = #{name,jdbcType=VARCHAR},
       age = #{age,jdbcType=INTEGER},
-      sex = #{sex,jdbcType=TINYINT},
+      sex = #{sex,jdbcType=INTEGER},
       phone = #{phone,jdbcType=VARCHAR},
       email = #{email,jdbcType=VARCHAR},
       address = #{address,jdbcType=VARCHAR},
